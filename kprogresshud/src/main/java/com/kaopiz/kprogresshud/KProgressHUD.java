@@ -22,7 +22,9 @@ import android.content.DialogInterface;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -237,6 +239,11 @@ public class KProgressHUD {
      */
     public KProgressHUD setAutoDismiss(boolean isAutoDismiss) {
         mIsAutoDismiss = isAutoDismiss;
+        return this;
+    }
+
+    public KProgressHUD setOnKeyListener(DialogInterface.OnKeyListener onKeyListener){
+        mProgressDialog.setOnKeyListener(onKeyListener);
         return this;
     }
 
