@@ -18,6 +18,7 @@ package com.kaopiz.kprogresshud;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Handler;
@@ -87,7 +88,10 @@ public class KProgressHUD {
     public static KProgressHUD create(Context context, Style style) {
         return new KProgressHUD(context).setStyle(style);
     }
-
+    public KProgressHUD setOnCancelListener(DialogInterface.OnCancelListener onCancelListener){
+        mProgressDialog.setOnCancelListener(onCancelListener);
+        return this;
+    }
     /**
      * Specify the HUD style (not needed if you use a custom view)
      * @param style One of the KProgressHUD.Style values
