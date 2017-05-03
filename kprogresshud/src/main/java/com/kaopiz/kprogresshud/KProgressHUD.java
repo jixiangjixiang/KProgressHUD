@@ -226,6 +226,7 @@ public class KProgressHUD {
         return this;
     }
 
+
     /**
      * Specify whether this HUD closes itself if progress reaches max. Default is true.
      * @return Current HUD
@@ -315,7 +316,7 @@ public class KProgressHUD {
             layoutParams.gravity = Gravity.CENTER;
             window.setAttributes(layoutParams);
 
-            setCanceledOnTouchOutside(false);
+            setCanceledOnTouchOutside(true);
 
             initViews();
         }
